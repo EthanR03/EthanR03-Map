@@ -1,4 +1,5 @@
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -23,7 +24,8 @@ public class Lab {
      * so here Integer is a wrapper for int.
      */
     public Map<Integer, String> createMap(){
-        return null;
+        Map<Integer, String> mp = new HashMap<Integer, String>();
+        return mp;
     }
 
     /**
@@ -33,7 +35,8 @@ public class Lab {
      */
     public int getSize(Map<Integer,String> map){
 //        return total number of key/value pairs in the map
-        return 0;
+        int size = map.size();
+        return size;
     }
 
     /**
@@ -44,6 +47,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addKeyValuePair(Map<Integer,String> map, int key, String value){
+        map.put(new Integer(key), value);
     }
 
     /**
@@ -53,7 +57,8 @@ public class Lab {
      * @return the value associated with key in map.
      */
     public String getValueFromKey(Map<Integer, String> map, int key){
-        return "";
+        String result = map.get(key);
+        return result;
     }
 
     /**
@@ -63,6 +68,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeKeyValuePair(Map<Integer, String> map, int key){
+        map.remove(key);
     }
 
     /**
@@ -73,6 +79,6 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void overwriteValue(Map<Integer, String> map, int key, String value){
-
+        map.put(key, value);
     }
 }
